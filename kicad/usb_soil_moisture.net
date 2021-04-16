@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/inotatsu/work/usb_series/usb_soil_moisture/kicad/usb_soil_moisture.sch)
-    (date "2021 April 17, Saturday 01:47:31")
+    (date "2021 April 17, Saturday 02:33:40")
     (tool "Eeschema (5.1.2-1)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -26,7 +26,7 @@
       (footprint kicad_mylib:SENO0193)
       (libsource (lib kicad_mylib) (part SENO0193) (description ""))
       (sheetpath (names /) (tstamps /))
-      (tstamp 6079E8C8)))
+      (tstamp 607A9A61)))
   (libparts
     (libpart (lib Seeeduino_XIAO) (part SeeeduinoXIAO)
       (fields
@@ -56,11 +56,12 @@
     (libpart (lib kicad_mylib) (part SENO0193)
       (fields
         (field (name Reference) U)
-        (field (name Value) SENO0193))
+        (field (name Value) SENO0193)
+        (field (name Footprint) kicad_mylib:SENO0193))
       (pins
-        (pin (num A) (name 1) (type input))
-        (pin (num GND) (name 3) (type power_in))
-        (pin (num VCC) (name 2) (type power_in)))))
+        (pin (num 1) (name A) (type input))
+        (pin (num 2) (name VCC) (type power_in))
+        (pin (num 3) (name GND) (type power_in)))))
   (libraries
     (library (logical Seeeduino_XIAO)
       (uri "/Users/inotatsu/work/kicad/kicad_lib/Seeeduino XIAO KICAD/Seeeduino XIAO.lib"))
@@ -68,13 +69,13 @@
       (uri /Users/inotatsu/work/kicad/kicad_mylib/kicad_mylib.lib)))
   (nets
     (net (code 1) (name GND)
-      (node (ref U2) (pin GND))
+      (node (ref U2) (pin 3))
       (node (ref U1) (pin 13)))
     (net (code 2) (name +5V)
       (node (ref U1) (pin 14))
-      (node (ref U2) (pin VCC)))
+      (node (ref U2) (pin 2)))
     (net (code 3) (name "Net-(U1-Pad1)")
-      (node (ref U2) (pin A))
+      (node (ref U2) (pin 1))
       (node (ref U1) (pin 1)))
     (net (code 4) (name "Net-(U1-Pad10)")
       (node (ref U1) (pin 10)))
