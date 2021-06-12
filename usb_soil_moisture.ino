@@ -17,8 +17,6 @@ void loop()
     result = analogRead(PIN_AD);
     Serial.print("moisture=");
     Serial.print(result);
-    Serial.print(",");
-    Serial.print("123");
     Serial.print(";status=");
     Serial.print(STATUS_OK);
     Serial.print("\n");
