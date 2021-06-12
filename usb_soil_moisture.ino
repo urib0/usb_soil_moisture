@@ -1,5 +1,6 @@
 #define PIN_AD A0
 #define STATUS_OK 0
+#define VERSION "1.00"
 
 void setup()
 {
@@ -19,6 +20,8 @@ void loop()
     Serial.print(result);
     Serial.print(";status=");
     Serial.print(STATUS_OK);
+    Serial.print(";version=");
+    Serial.print(VERSION);
     Serial.print("\n");
 
     delay(1000);
